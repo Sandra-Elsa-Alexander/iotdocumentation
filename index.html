@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KERALA IOT CHALLENGE</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+   <!----heading section--> 
+   <header class="pagehead">
+        <h1 class="project">Kerala IOT Challenge Level-1</h1>
+        <a href="https://github.com/Sandra-Elsa-Alexander"><button>CHECKOUT MY GITHUB</button></a>
+</header>
+<!--contents add-->
+<div class="content">
+    <h2>About ME</h2>
+    <p>Hello All, I am Sandra Elsa Alexander, 3rd year BTech student at Muthoot Institute of Technology and Science.I am participating in Kerala IOT Challenge to explore my skills in IOT.  I am also interested in Machine Learning and Cyber Security</p>
+</div>
+<!--list create-->
+<div class="content">
+    <h2>Experiment 1-Hello World LED Blinking</h2>
+    <h3>Components</h3>
+<ul>
+    <li>Arduino Uno Board</li>
+    <li>USB Cable</li>
+    <li>LED* 1</li>
+    <li>220 OHM Resistor*1</li>
+    <li>Breadboard</li>
+    <li>Jumper Wires (Male to Male )* 2</li>
+    
+</ul>
+<!--image add-->
+</div>
+
+
+
+<div class="content">
+<h3>Circuit Diagram</h3>
+<img src="images/image1.1.png "alt="circuit1">
+<img src="images/image1.2.png " alt="circuit1" height="580">
+</div>
+<div class="content">
+    <h3>Code</h3>
+</div>
+
+<div class="regform">
+   
+<p>int ledPin = 10; // define digital pin 10.<br>
+    void setup()<br>
+    {<br>
+    pinMode(ledPin, OUTPUT);// define pin with LED connected as output.<br>
+    }<br>
+    void loop()<br>
+    {<br>
+    digitalWrite(ledPin, HIGH); // set the LED on.<br>
+    delay(1000); // wait for a second.<br>
+    digitalWrite(ledPin, LOW); // set the LED off.<br>
+    delay(1000); // wait for a second<br>
+    }<br>
+
+
+</p>
+
+
+
+</div>
+<div class="content">
+    <h3>Output</h3>
+    <iframe width="900" height=400" src="images/image1.3.mp4"></iframe>
+
+
+
+</div>
+<!--Experiment2-->
+<div class="content">
+    <h2>Experiment 2-Traffic Light</h2>
+    <p>
+        Traffic lights allow everyone to cross the intersection point one by one, reducing conflicts between vehicles entering intersection points from different directions.<br> It provides road safety, also helps to solve traffic in simple manners.
+
+<br>There are different colours in traffic lights. Each light has a meaning, and these lights tell drivers what to do.<br>
+
+Red light ON- A driver should stop.<br>
+Yellow light ON- A driver has to slow down and be ready to stop.<br>
+Greenlight ON- A driver can start driving or keep driving.<br>
+    </p>
+    <h3>Components</h3>
+<ul>
+    <li>Arduino Uno Board</li>
+    <li>USB Cable</li>
+    <li>LED* 3(Red,Yellow,Green)</li>
+    <li>220 OHM Resistor*1</li>
+    <li>Breadboard</li>
+    <li>Jumper Wires (Male to Male )-several</li>
+    
+</ul>
+<!--image add-->
+</div>
+
+
+
+<div class="content">
+<h3>Circuit Diagram</h3>
+<img src="images/image2.1.png "alt="circuit1">
+<img src="images/image2.2.png " alt="circuit1" height="580">
+</div>
+<div class="content">
+    <h3>Code</h3>
+</div>
+
+<div class="regform">
+   
+<p>int redled =10; <br>
+    int yellowled =7;<br>
+    int greenled =4; <br>
+    void setup()<br>
+    {<br>
+    pinMode(redled, OUTPUT);<br>
+    pinMode(yellowled, OUTPUT);<br>
+    pinMode(greenled, OUTPUT);<br>
+    }<br>
+    void loop()<br>
+    {<br>
+    digitalWrite(greenled, HIGH);//// turn on green LED<br>
+    delay(5000);// wait 5 seconds<br>
+    
+    digitalWrite(greenled, LOW); // turn off green LED<br>
+    for(int i=0;i< 3; i++) 
+    {<br>
+    delay(500);<br>
+    digitalWrite(yellowled, HIGH);<br>
+    delay(500);<br>
+    digitalWrite(yellowled, LOW);<br>
+    } <br>
+    delay(500);<br>
+    digitalWrite(redled, HIGH);<br>
+    delay(5000);<br>
+    digitalWrite(redled, LOW);<br>
+    }
+
+
+</p>
+
+
+
+</div>
+<div class="content">
+    <h3>Output</h3>
+    <iframe width="900" height=400" src="images/image2.3.mp4"></iframe>
+
+
+
+</div>
+
+<!--Experiment3-->
+<div class="content">
+    <h2>Experiment 3-LED Chasing Effect</h2>
+    
+    <h3>Components</h3>
+<ul>
+    <li>Arduino Uno Board</li>
+    <li>USB Cable</li>
+    <li>LED* 6</li>
+    <li>220 OHM Resistor*6</li>
+    <li>Breadboard</li>
+    <li>Jumper Wires (Male to Male )-13</li>
+    
+</ul>
+<!--image add-->
+</div>
+
+
+
+<div class="content">
+<h3>Circuit Diagram</h3>
+<img src="images/image3.1.png "alt="circuit1" width="400" height="500">
+<img src="images/image3.2.png " alt="circuit1" height="500">
+</div>
+<div class="content">
+    <h3>Code</h3>
+</div>
+
+<div class="regform">
+   
+<p>
+    int BASE = 2;  <br>
+    int NUM = 6;   <br>
+    void setup() <br>
+    { <br>
+       for (int i = BASE; i < BASE + NUM; i ++)  <br>
+       { <br>
+         pinMode(i, OUTPUT);    <br>
+       } <br>
+    } <br>
+    void loop() <br>
+    { <br>
+       for (int i = BASE; i < BASE + NUM; i ++)  <br>
+       { <br>
+         digitalWrite(i, LOW);    <br>
+         delay(900);         <br>
+       } <br>
+       for (int i = BASE; i < BASE + NUM; i ++)  <br>
+       { <br>
+         digitalWrite(i, HIGH);    <br>
+         delay(900);         <br>
+       }   <br>
+    }
+</p>
+
+
+
+</div>
+<div class="content">
+    <h3>Output</h3>
+    <iframe width="900" height=400" src="images/image3.3.mp4"></iframe>
+
+
+
+</div>
+
+<!--Experiment4-->
+<div class="content">
+    <h2>Experiment 4-Button Controlled LED</h2>
+    <p>Pushbuttons or switches connect two points in a circuit when you press them.<br> When the pushbutton is open (unpressed) there is no connection between the two legs of the pushbutton, so the pin is connected to ground (through the pull-down resistor) and we read a LOW.<br> When the button is closed (pressed), it makes a connection between its two legs, connecting the pin to 5 volts, so that we read a HIGH.<br></p>
+    <h3>Components</h3>
+<ul>
+    <li>Arduino Uno Board</li>
+    <li>Button Switch *1</li>
+    <li>10k OHM Resistor</li>
+    <li>USB Cable</li>
+    <li>Red M5LED</li>
+    <li>220 OHM Resistor*1</li>
+    <li>Breadboard</li>
+    <li>Jumper Wires (Male to Male )*6</li>
+    
+</ul>
+<!--image add-->
+</div>
+
+
+
+<div class="content">
+<h3>Circuit Diagram</h3>
+<img src="images/image4.2.png "alt="circuit1">
+</div>
+<div class="content">
+    <h3>Code</h3>
+</div>
+
+<div class="regform">
+   
+<p>
+int ledpin=11;<br>
+int inpin=7;<br>
+int val;<br>
+void setup()<br>
+{<br>
+pinMode(ledpin,OUTPUT);<br>
+pinMode(inpin,INPUT);<br>
+}<br>
+void loop()<br>
+{<br>
+val=digitalRead(inpin);<br>
+if(val==LOW)<br>
+{ digitalWrite(ledpin,LOW);}<br>
+else<br>
+{ digitalWrite(ledpin,HIGH);}<br>
+}
+</p>
+
+
+
+</div>
+<div class="content">
+    <h3>Output</h3>
+    <iframe width="900" height=400" src="images/image4.3.mp4"></iframe>
+
+
+
+</div>
+
+
+<!--Experiment5-->
+<div class="content">
+    <h2>Experiment 5-Buzzer</h2>
+    <p>An arduino buzzer is also called a piezo buzzer. It is basically a tiny speaker that you can connect directly to an Arduino.<br> You can make it sound a tone at a frequency you set.The buzzer produces sound based on reverse of the piezoelectric effect.<br></p>
+    <h3>Components</h3>
+<ul>
+    <li>Arduino Uno Board</li>
+    <li>USB Cable</li>
+    <li>LED* 1</li>
+    <li>Buzzer</li>
+    <li>Breadboard</li>
+    <li>Jumper Wire *-2</li>
+    
+</ul>
+<!--image add-->
+</div>
+
+
+
+<div class="content">
+<h3>Circuit Diagram</h3>
+<img src="images/image5.1.png "alt="circuit1" width="480" height="500">
+<img src="images/image5.2.png " alt="circuit1" height="500">
+</div>
+<div class="content">
+    <h3>Code</h3>
+</div>
+
+<div class="regform">
+   
+<p>
+    int buzzer=8;<br>
+void setup()<br>
+{ <br>
+  pinMode(buzzer,OUTPUT);<br>
+} <br>
+void loop() <br>
+{<br>
+  unsigned  char i,j;<br>
+  while(1){<br>
+    for(i=0;i< 100;i++)<br>
+    {<br>
+      digitalWrite(buzzer,HIGH);<br>
+      delay(1);<br>
+    }<br>
+    for(i=0;i< 100;i++)<br>
+    {<br>
+    digitalWrite(buzzer,HIGH);<br>
+    delay(2);<br>
+    digitalWrite(buzzer,LOW);<br>
+    delay(2);<br>
+    }<br>
+  }<br>
+digitalWrite(buzzer, HIGH); <br>
+}
+</p>
+
+
+
+</div>
+<div class="content">
+    <h3>Output</h3>
+    <iframe width="900" height=400" src="images/image5.3.mp4"></iframe>
+
+
+
+</div>
+
+
+<!--Experiment6-->
+<div class="content">
+    <h2>Experiment 6-RGB LED</h2>
+    <p>The RGB led consists of three different led's, from the name we can guess that these led's are red, green and blue. We can obtain many other colors by mixing up these colors. The Arduino has a analog write function which will help us in obtaining different colors for Arduino RGB led</p>
+    <h3>Components</h3>
+<ul>
+    <li>Arduino Uno Board</li>
+    <li>USB Cable</li>
+    <li>RGB LED* 1</li>
+    <li>Resistor*3</li>
+    <li>Breadboard</li>
+    <li>Jumper Wires*5</li>
+    
+</ul>
+<!--image add-->
+</div>
+
+
+
+<div class="content">
+<h3>Circuit Diagram</h3>
+<img src="images/image6.2.png "alt="circuit1" width="400" height="500">
+
+</div>
+<div class="content">
+    <h3>Code</h3>
+</div>
+
+<div class="regform">
+   
+<p>
+    int redpin = 11; <br>
+int bluepin =10;<br>
+int greenpin =9;<br>
+int val;<br>
+void setup() {<br>
+  pinMode(redpin, OUTPUT);<br>
+  pinMode(bluepin, OUTPUT);<br>
+  pinMode(greenpin, OUTPUT);<br>
+  Serial.begin(9600);<br>
+}<br>
+void loop() <br>
+{<br>
+for(val=255; val>0; val--)<br>
+  {<br>
+   analogWrite(11, val);<br>
+   analogWrite(10, 255-val);<br>
+   analogWrite(9, 128-val);<br>
+   delay(1); <br>
+  }<br>
+for(val=0; val< 255; val++)<br>
+  {<br>
+   analogWrite(11, val);<br>
+   analogWrite(10, 255-val);<br>
+   analogWrite(9, 128-val);<br>
+   delay(1); <br>
+  }<br>
+ Serial.println(val, DEC);<br>
+}
+</p>
+
+
+
+</div>
+<div class="content">
+    <h3>Output</h3>
+    <iframe width="900" height=400" src="images/image6.3.mp4"></iframe>
+
+
+
+</div>
+
+
+<!--Experiment7-->
+<div class="content">
+    <h2>Experiment 7-LDR Light Sensor</h2>
+    <p>An LDR is a component that has a (variable) resistance that changes with the light intensity that falls upon it. This allows them to be used in light sensing circuits.</p>
+    <h3>Components</h3>
+<ul>
+    <li>Arduino Uno Board</li>
+    <li>Photo Resistor*1</li>
+    <li>10k OHM Resistor</li>
+    <li>USB Cable</li>
+    <li>Red M5LED*1</li>
+    <li>220 OHM Resistor*1</li>
+    <li>Breadboard</li>
+    <li>Jumper Wires*5</li>
+    
+</ul>
+<!--image add-->
+</div>
+
+
+
+<div class="content">
+<h3>Circuit Diagram</h3>
+<img src="images/image7.2.png "alt="circuit1" width="480" height="500">
+<img src="images/image7.3.jpg " alt="circuit1" height="500">
+</div>
+<div class="content">
+    <h3>Code</h3>
+</div>
+
+<div class="regform">
+   
+<p>
+    void setup() { <br>
+        Serial.begin(9600); <br>
+        pinMode(13,OUTPUT); <br>
+      } <br>
+      void loop() { <br>
+        float sensorValue = analogRead(A0); <br>
+        // Reads the analog input ranging from 0 to 1023 <br>
+        Serial.println(sensorValue); <br>
+        if(sensorValue<=400) <br>
+        { <br>
+          digitalWrite(13,HIGH); <br>
+        } <br>
+        else <br>
+        digitalWrite(13,LOW); <br>
+      }
+</p>
+
+
+
+</div>
+<div class="content">
+    <h3>Output</h3>
+    <iframe width="900" height=400" src="images/image7.5.mp4"></iframe>
+
+
+
+</div>
+<!--Experiment8-->
+<div class="content">
+    <h2>Experiment 8-Flame Sensor</h2>
+    <p>A sensor which is most sensitive to a normal light is known as a flame sensor. That is why this sensor module is used in flame alarms.</p>
+    <h3>Components</h3>
+<ul>
+    <li>Arduino Uno Board</li>
+    <li>Flame Sensor*1</li>
+    <li>10k OHM Resistor</li>
+    <li>USB Cable</li>
+    <li>Buzzer</li>
+    <li>Breadboard</li>
+    <li>Jumper Wires*6</li>
+    
+</ul>
+<!--image add-->
+</div>
+
+
+
+<div class="content">
+<h3>Circuit Diagram</h3>
+<img src="images/image8.2.png "alt="circuit1" width="480" height="500">
+<img src="images/image8.3.jpg " alt="circuit1" height="500">
+</div>
+<div class="content">
+    <h3>Code</h3>
+</div>
+
+<div class="regform">
+   
+<p>
+    int flame=0; <br>
+int Beep=9;<br>
+int val=0;<br>
+ void setup() <br>
+{<br>
+  pinMode(Beep,OUTPUT);<br>
+ pinMode(flame,INPUT);<br>
+ Serial.begin(9600);<br>
+ } <br>
+void loop() <br>
+{ <br>
+  val=analogRead(flame);<br>
+  Serial.println(val);<br>
+  if(val>=600) <br>
+  {  <br>
+       delay(800); <br>
+   digitalWrite(Beep,HIGH); <br>
+  
+   }else <br>
+   {  
+     digitalWrite(Beep,LOW); <br>
+    }<br>
+   delay(500); <br>
+}
+</p>
+
+
+
+</div>
+<div class="content">
+    <h3>Output</h3>
+    <iframe width="900" height=400" src="images/image8.4.mp4"></iframe>
+
+
+
+</div>
+
+<!--Experiment9-->
+<div class="content">
+    <h2>Experiment 9-LM35 Temperature Sensor</h2>
+    <p>LM35 is a temperature sensor that outputs an analog signal which is proportional to the instantaneous temperature. The output voltage can easily be interpreted to obtain a temperature reading in Celsius. The advantage of lm35 over thermistor is it does not require any external calibration.</p>
+    <h3>Components</h3>
+<ul>
+    <li>Arduino Uno Board</li>
+    <li>LM35 *1</li>
+    <li>USB Cable</li>
+    <li>Breadboard</li>
+    <li>Jumper Wires*6</li>
+    
+</ul>
+<!--image add-->
+</div>
+
+
+
+<div class="content">
+<h3>Circuit Diagram</h3>
+<img src="images/image9.2.png "alt="circuit1" width="480" height="500">
+<img src="images/image9.3.jpg " alt="circuit1" height="500">
+</div>
+<div class="content">
+    <h3>Code</h3>
+</div>
+
+<div class="regform">
+   
+<p>
+    int potPin = 0; <br>
+void setup()<br>
+{<br>
+Serial.begin(9600);<br>
+}<br>
+void loop()<br>
+{<br>
+int val;<br>
+int dat;<br>
+val=analogRead(0);<br>
+dat=(125*val)>>8;<br>
+Serial.print("Tep");<br>
+Serial.print(dat);<br>
+Serial.println("C");<br>
+delay(500);<br>
+}
+</p>
+
+
+
+</div>
+<div class="content">
+    <h3>Output</h3>
+    <img width="1000" height="400" src="images/image9.4.png">
+
+
+
+</div>
+
+
+<!--Experiment10-->
+<div class="content">
+    <h2>Experiment 10-IR Remote Control Using TSOP</h2>
+    <p>The TSOP sensor module is controlled with the help of Arduino. The information or codes which are received by it is printed on the Arduino IDE serial monitor screen. same as you use an IR remote to control a T.V, home theater, car stereo, etc we use the remote here for sending the information. You can also use a small remote which comes along with this module or you can also buy it. In this IR data transmission technology, you must hold the remote in front of the TSOP sensor module in such a way that both facing each other. The receiver fails to receive any signal if there is an obstacle present in between the receiver and transmitter module. Once you complete the circuit and upload the given code, you have to turn the face of the remote having IR LED towards the TSOP sensor module and then press the buttons on it.</p>
+    <h3>Components</h3>
+<ul>
+    <li>Arduino Uno Board</li>
+    <li>Infrared Remote Controller*1</li>
+    <li>220 OHM Resistor</li>
+    <li>USB Cable</li>
+    <li>Infrared Receiver*1</li>
+    <li>Breadboard</li>
+    <li>Jumper Wires*11</li>
+    <li>LED*6</li>
+    
+</ul>
+<!--image add-->
+</div>
+
+
+
+<div class="content">
+<h3>Circuit Diagram</h3>
+<img src="images/image10.2.png "alt="circuit1" width="480" height="500">
+<img src="images/image10.3.png " alt="circuit1" height="500">
+</div>
+<div class="content">
+    <h3>Code</h3>
+</div>
+
+<div class="regform">
+   
+<p>
+    #include <IRremote.h>  <br>
+        int RECV_PIN = 3;  <br>            
+        int c=0;          <br>            
+        IRrecv irrecv(RECV_PIN);<br>
+        decode_results results;<br>
+        void setup()<br>
+        {<br>
+           pinMode(8, OUTPUT);<br>
+           pinMode(9, OUTPUT);<br>
+           pinMode(10, OUTPUT);<br>
+           pinMode(11, OUTPUT);<br>
+           pinMode(12, OUTPUT);<br>
+           pinMode(13, OUTPUT);<br>
+           Serial.begin(9600);<br>
+          irrecv.enableIRIn();    <br>                 
+        }
+        void loop() {<br>
+          if (irrecv.decode(&results)) {<br>
+            Serial.println(results.value);<br>
+            irrecv.resume();               <br>         
+          if(results.value==3191926784)      <br>                          
+          {
+                     digitalWrite(8,HIGH);<br>
+          }
+          else if(results.value==3191865354)<br>
+          {
+                     digitalWrite(8,LOW);<br>
+          }
+           if(results.value==62393766)  <br>                              
+          {
+                     digitalWrite(9,HIGH);<br>
+          }
+          else if(results.value==1530020559)<br>
+          {
+                     digitalWrite(9,LOW);<br>
+          }
+            if(results.value==2517132867) <br>                                    
+          {
+                     digitalWrite(10,HIGH);<br>
+          }
+          else if(results.value==3191865354) <br>
+          {
+                     digitalWrite(10,LOW);<br>
+          }
+            if(results.value== 3191869577) <br>                                    
+          {
+                     digitalWrite(11,HIGH);<br>
+          }
+          else if(results.value==25179538654)<br>
+          {
+                     digitalWrite(11,LOW);<br>
+          }
+            if(results.value==0x00FF5AA5)     <br>                                 
+          {
+                     digitalWrite(12,HIGH);<br>
+          }
+          else if(results.value==0x00FF42BD)<br>
+          {
+                     digitalWrite(12,LOW);<br>
+          }
+          if(results.value== 0x00FF4AB5) <br>                                   
+          {
+                     digitalWrite(12,HIGH);<br>
+          }
+          else if(results.value== 0x00FF52AD)<br>
+          {
+                     digitalWrite(12,LOW);<br>
+          }
+          }
+        }
+
+</p>
+
+
+
+</div>
+<div class="content">
+    <h3>Output</h3>
+    <iframe width="900" height=400" src="images/image10.4.mp4"></iframe>
+
+
+
+</div>
+<!--Experiment11-->
+<div class="content">
+    <h2>Experiment 11-Potentiometer Analog Value Reading</h2>
+    <p>A potentiometer is a simple mechanical device that provides a varying amount of resistance when its shaft is turned. By passing voltage through a potentiometer and into an analog input on your board, it is possible to measure the amount of resistance produced by a potentiometer (or pot for short) as an analog value.</p>
+    <h3>Components</h3>
+<ul>
+    <li>Arduino Uno Board</li>
+    <li>10k Potentiometer</li>
+    <li>USB Cable</li>
+    <li>Breadboard</li>
+    <li>Jumper Wires*3</li>
+    
+    
+</ul>
+<!--image add-->
+</div>
+
+
+
+<div class="content">
+<h3>Circuit Diagram</h3>
+<img src="images/image11.2.png "alt="circuit1" width="480" height="500">
+<img src="images/image11.3.png " alt="circuit1" height="500">
+</div>
+<div class="content">
+    <h3>Code</h3>
+</div>
+
+<div class="regform">
+   
+<p>
+int potpin=0; <br>
+int ledpin=13; <br>
+int val=0; <br>
+void setup() <br>
+{ <br>
+pinMode(ledpin,OUTPUT); <br>
+Serial.begin(9600); <br>
+}
+void loop() <br>
+{
+digitalWrite(ledpin,HIGH); <br>
+delay(50); <br>
+digitalWrite(ledpin,LOW); <br>
+delay(50); <br>
+val=analogRead(potpin); <br>
+Serial.println(val); <br>
+
+}
+</p>
+
+
+
+</div>
+<div class="content">
+    <h3>Output</h3>
+    <img width="900" height=400" src="images/image11.4.png">
+
+
+
+</div>
+
+
+<!--Experiment12-->
+<div class="content">
+    <h2>Experiment 12-7 Segment Display</h2>
+    <p>7-segment display has its common pins (COM) connected to the +5V pin.
+
+        If a pin turns off, the corresponding segment will turn on. It's because when the pin is on, the voltage difference between the pin and the +5V is 0. It is the same if the +5V was replaced by 0V. We can't connect the COM to the GND because the LEDs are like diodes so they wouldn't light up at all.</p>
+    <h3>Components</h3>
+<ul>
+    <li>Arduino Uno Board</li>
+    <li>1-digit LED Segment Display*1</li>
+    <li>220 OHM Resistor*8</li>
+    <li>USB Cable</li>
+    <li>Breadboard</li>
+    <li>Jumper Wires*Several</li>
+    
+    
+</ul>
+<!--image add-->
+</div>
+
+
+
+<div class="content">
+<h3>Circuit Diagram</h3>
+<img src="images/image12.2.png "alt="circuit1" width="480" height="500">
+<img src="images/image12.3.png " alt="circuit1" height="500">
+</div>
+<div class="content">
+    <h3>Code</h3>
+</div>
+
+<div class="regform">
+   
+<p>
+    byte pin[] = {2, 3, 4, 5, 6, 7, 8, 9}; <br>
+ 
+    int number[9][8] = {<br>
+      {1, 1, 0, 0, 0, 1, 1, 1},
+      {0, 0, 1, 0, 0, 0, 1, 0},
+      {1, 0, 0, 0, 0, 0, 1, 0},
+      {1, 1, 0, 0, 0, 1, 0, 0},
+      {1, 0, 0, 0, 1, 0, 0, 0},
+      {0, 0, 0, 0, 1, 0, 0, 0},
+      {1, 1, 0, 0, 0, 0, 0, 1},
+      {0, 0, 0, 0, 0, 0, 0, 0},
+      {1, 1, 0, 0, 0, 0, 0, 0},
+    };<br>
+     
+    void setup() {<br>
+      for (byte a = 0; a < 8; a++) {<br>
+        pinMode(pin[a], OUTPUT);<br>
+      }<br>
+    }<br>
+     
+    void loop() {<br>
+      for (int a = 0; a < 9; a++) {<br>
+        for (int b = 0; b < 8; b++) {<br>
+          digitalWrite(pin[b], number[a][b]);<br>
+        }<br>
+        delay(500);<br>
+      }<br>
+    }
+
+</p>
+
+
+
+</div>
+<div class="content">
+    <h3>Output</h3>
+    <iframe width="900" height=400" src="images/image12.4.mp4"></iframe>
+
+
+
+</div>
+
+
+<!--Assignment1-->
+<div class="content">
+    <h2>Assignment 1-Automatic Night Lamp</h2>
+    <p>Automatic night lamp is for turning ON and OFF the lamp automatically without the need of human interventions. It senses the light intensity from surroundings and find whether its day or night. And it automatically turns ON when the surrounding is dark and it turns OFF when it receives light from surroundings. A sensor called LDR is used to detect the light intensity. This project finds wide outdoor applications in streets, gardens and public places where it finds difficulty to appoint a person to operate the lights.</p>
+    <h3>Components</h3>
+<ul>
+    <li>Arduino Uno Board</li>
+    <li>Photo Resistor *1</li>
+    <li>220 OHM Resistor*1</li>
+    <li>Yellow M5 LED *1</li>
+    <li>10k OHM Resistor</li>
+    <li>USB Cable</li>
+    <li>Breadboard</li>
+    <li>Jumper Wires*Several</li>
+    
+    
+</ul>
+<!--image add-->
+</div>
+
+
+
+<div class="content">
+<h3>Circuit Diagram</h3>
+<img src="images/assignment1.1.png "alt="circuit1" width="480" height="500">
+
+</div>
+<div class="content">
+    <h3>Code</h3>
+</div>
+
+<div class="regform">
+   
+<p>
+    const int ledPin = 13;   <br>
+    const int ldrPin = A0;   <br>
+    void setup() { <br>
+      Serial.begin(9600); <br>
+      pinMode(ledPin, OUTPUT);   <br>
+      pinMode(ldrPin, INPUT);    <br>
+    }
+    void loop() { <br>
+      int ldrStatus = analogRead(ldrPin);   <br>
+      
+       if (ldrStatus <=300) { <br>
+        digitalWrite(ledPin, HIGH);                <br>
+        Serial.println("LDR is DARK, LED is ON"); <br>
+       } <br>
+      else { <br>
+        digitalWrite(ledPin, LOW);          <br>
+        Serial.println("LDR is Bright, LED is OFF"); <br>
+      }
+    }
+
+</p>
+
+
+
+</div>
+<div class="content">
+    <h3>Output</h3>
+    <iframe width="900" height=400" src="images/assignment1.2.mp4"></iframe>
+
+
+
+</div>
+
+<!--Assignment2-->
+<div class="content">
+    <h2>Assignment 2-Electronic Dice with  7 Segment Display and Push BUtton</h2>
+    <h3>Components</h3>
+<ul>
+    <li>Arduino Uno Board</li>
+    <li>220 OHM Resistor*1</li>
+    <li>Push Button *1</li>
+    <li>USB Cable</li>
+    <li>Breadboard</li>
+    <li>Jumper Wires*Several</li>
+    
+    
+</ul>
+<!--image add-->
+</div>
+
+
+
+<div class="content">
+<h3>Circuit Diagram</h3>
+<img src="images/assignment2.1.png "alt="circuit1" width="480" height="500">
+
+</div>
+<div class="content">
+    <h3>Code</h3>
+</div>
+
+<div class="regform">
+   
+<p>
+    #define readPin A0  <br>
+    bool readStatus=0;   <br>
+    int sevenSeg[]={13,12,11,10,9,8,7,6};  <br>
+    void number(int i){   <br>
+      switch(i){    <br>
+        case 0: digitalWrite(sevenSeg[0],LOW);    <br>
+                digitalWrite(sevenSeg[1],LOW);     <br>
+                digitalWrite(sevenSeg[2],LOW);      <br>
+                
+                //digitalWrite(sevenSeg[3],HIGH);    <br>
+                digitalWrite(sevenSeg[4],HIGH);      <br>
+                
+                digitalWrite(sevenSeg[5],LOW); <br>
+                digitalWrite(sevenSeg[6],LOW); <br>
+                digitalWrite(sevenSeg[7],LOW); <br>
+                break; <br>
+        case 1: digitalWrite(sevenSeg[0],LOW); <br>
+                digitalWrite(sevenSeg[1],HIGH); <br>
+                digitalWrite(sevenSeg[2],HIGH); <br>
+                
+                //digitalWrite(sevenSeg[3],HIGH); <br>
+                digitalWrite(sevenSeg[4],HIGH); <br>
+                
+                digitalWrite(sevenSeg[5],LOW); <br>
+                digitalWrite(sevenSeg[6],HIGH); <br>
+                digitalWrite(sevenSeg[7],HIGH); <br>
+                break; <br>
+        case 2: digitalWrite(sevenSeg[0],LOW); <br>
+                digitalWrite(sevenSeg[1],LOW); <br>
+                digitalWrite(sevenSeg[2],HIGH); <br>
+                
+               // digitalWrite(sevenSeg[3],HIGH);  <br>
+                digitalWrite(sevenSeg[4],LOW); <br>
+                
+                digitalWrite(sevenSeg[5],HIGH); <br>
+                digitalWrite(sevenSeg[6],LOW); <br>
+                digitalWrite(sevenSeg[7],LOW); <br>
+                break; <br>
+        case 3: digitalWrite(sevenSeg[0],HIGH); <br>
+                digitalWrite(sevenSeg[1],LOW); <br>
+                digitalWrite(sevenSeg[2],LOW); <br>
+                
+                //digitalWrite(sevenSeg[3],HIGH);  <br>
+                digitalWrite(sevenSeg[4],LOW); <br>
+                
+                digitalWrite(sevenSeg[5],HIGH); <br>
+                digitalWrite(sevenSeg[6],LOW); <br>
+                digitalWrite(sevenSeg[7],LOW); <br>
+                break; <br>
+        case 4: digitalWrite(sevenSeg[0],HIGH); <br>
+                digitalWrite(sevenSeg[1],HIGH); <br>
+                digitalWrite(sevenSeg[2],LOW); <br>
+                
+                //digitalWrite(sevenSeg[3],HIGH);  <br>
+                digitalWrite(sevenSeg[4],LOW); <br>
+                
+                digitalWrite(sevenSeg[5],LOW); <br>
+                digitalWrite(sevenSeg[6],HIGH); <br>
+                digitalWrite(sevenSeg[7],LOW); <br>
+                break;
+    
+        case 5: digitalWrite(sevenSeg[0],HIGH); <br>
+                digitalWrite(sevenSeg[1],LOW); <br>
+                digitalWrite(sevenSeg[2],LOW); <br>
+                
+                //digitalWrite(sevenSeg[3],HIGH);  <br>
+                digitalWrite(sevenSeg[4],LOW); <br>
+                
+                digitalWrite(sevenSeg[5],LOW); <br>
+                digitalWrite(sevenSeg[6],LOW); <br>
+                digitalWrite(sevenSeg[7],HIGH); <br>
+                break;
+       case 6: digitalWrite(sevenSeg[0],LOW); <br>
+                digitalWrite(sevenSeg[1],LOW); <br>
+                digitalWrite(sevenSeg[2],LOW); <br>
+                
+                //digitalWrite(sevenSeg[3],HIGH);  <br>
+                digitalWrite(sevenSeg[4],LOW); <br>
+                
+                digitalWrite(sevenSeg[5],LOW); <br>
+                digitalWrite(sevenSeg[6],LOW); <br>
+                digitalWrite(sevenSeg[7],HIGH); <br>
+                break; <br>
+        case 7: digitalWrite(sevenSeg[0],HIGH); <br>
+                digitalWrite(sevenSeg[1],HIGH); <br>
+                digitalWrite(sevenSeg[2],LOW); <br>
+                
+                //digitalWrite(sevenSeg[3],HIGH); <br>
+                digitalWrite(sevenSeg[4],HIGH); <br>
+                
+                digitalWrite(sevenSeg[5],HIGH); <br>
+                digitalWrite(sevenSeg[6],LOW); <br>
+                digitalWrite(sevenSeg[7],LOW); <br>
+                break; <br>
+       case 8: digitalWrite(sevenSeg[0],LOW); <br>
+                digitalWrite(sevenSeg[1],LOW); <br>
+                digitalWrite(sevenSeg[2],LOW); <br>
+                
+                //digitalWrite(sevenSeg[3],HIGH); <br>
+                digitalWrite(sevenSeg[4],LOW); <br>
+                
+                digitalWrite(sevenSeg[5],LOW); <br>
+                digitalWrite(sevenSeg[6],LOW); <br>
+                digitalWrite(sevenSeg[7],LOW); <br>
+                break; <br>
+       case 9: digitalWrite(sevenSeg[0],HIGH); <br>
+                digitalWrite(sevenSeg[1],LOW); <br>
+                digitalWrite(sevenSeg[2],LOW); <br>
+                
+                //digitalWrite(sevenSeg[3],HIGH); <br>
+                digitalWrite(sevenSeg[4],LOW); <br>
+                
+                digitalWrite(sevenSeg[5],LOW); <br>
+                digitalWrite(sevenSeg[6],LOW); <br>
+                digitalWrite(sevenSeg[7],LOW); <br>
+                break; <br>
+          
+      }
+      <br>
+    } <br>
+    void setup(){  <br>
+      Serial.begin(9600); <br>
+     
+      for(int i=0;i<8;i++){ <br>
+        pinMode(sevenSeg[i],OUTPUT); <br>
+        digitalWrite(sevenSeg[i],HIGH); <br>
+      } <br>
+      pinMode(readPin,INPUT_PULLUP); <br>
+      
+      
+        
+    }  <br>
+    void loop(){ <br>
+      if(readStatus==0&&digitalRead(readPin)==LOW){ <br>
+        number(random(1,7)); <br>
+        readStatus=1; <br>
+      }else if(digitalRead(readPin)==HIGH&&readStatus==1){ <br>
+        readStatus=0; <br>
+      } <br>
+      delay(50); <br>
+    } <br>
+
+</p>
+
+
+
+</div>
+<div class="content">
+    <h3>Output</h3>
+    <iframe width="900" height=400" src="images/assignment2.2.mp4"></iframe>
+
+
+
+</div>
+
+
+</body>
+</html>
